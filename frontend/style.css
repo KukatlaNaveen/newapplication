@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Wrapper */
+.wrapper {
+    display: flex;
+    width: 800px;
+    height: 450px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Left Side */
+.left {
+    flex: 1;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.left h1 {
+    font-size: 28px;
+}
+
+/* Right Side */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form */
+.form-box {
+    width: 80%;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+/* Link */
+a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+}
+/* ===== DASHBOARD COMMON ===== */
+.dashboard {
+    width: 90%;
+    height: 90vh;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #2d3748;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background: #4a5568;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #667eea;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+    background: #f7fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+/* USER COLORS */
+.user-theme .sidebar {
+    background: #1e90ff;
+}
+
+.user-theme .sidebar button {
+    background: #4facfe;
+}
+
+/* ADMIN COLORS */
+.admin-theme .sidebar {
+    background: #2f855a;
+}
+
+.admin-theme .sidebar button {
+    background: #38a169;
+}
+
+/* DEALER COLORS */
+.dealer-theme .sidebar {
+    background: #c05621;
+}
+
+.dealer-theme .sidebar button {
+    background: #dd6b20;
+}

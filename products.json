@@ -1,0 +1,17 @@
+[
+    {
+        "name": "bag",
+        "price": 999.0,
+        "quantity": 15
+    },
+    {
+        "name": "watch",
+        "price": 999.0,
+        "quantity": 5
+    },
+    {
+        "name": "Black shirt",
+        "price": 999.0,
+        "quantity": 5
+    }
+]

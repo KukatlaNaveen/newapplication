@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <div>
+            <h1>Welcome Back</h1>
+            <p>Login to continue your shopping</p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <div class="form-box">
+            <h2>Login</h2>
+
+            <select id="role">
+                <option value="">Select Role</option>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+                <option value="dealer">Dealer</option>
+            </select>
+
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="login()">Login</button>
+
+            <a href="register.html">Create account</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function login() {
+    const role = document.getElementById("role").value;
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    if (!role || !user || !pass) {
+        alert("Fill all details");
+        return;
+    }
+
+    if(role === "admin"){
+        window.location.href = "admin_dashboard.html";
+    } 
+    else if(role === "dealer"){
+        window.location.href = "dealer_dashboard.html";
+    } 
+    else {
+        window.location.href = "user_dashboard.html";
+    }
+}
+</script>
+
+</body>
+</html>
