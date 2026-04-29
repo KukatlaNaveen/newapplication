@@ -1,3 +1,10 @@
+<script>
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (!user) {
+    window.location.href = "login.html";
+}
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,14 +22,37 @@
         <button>View Products</button>
         <button>Logout</button>
     </div>
+     <div class="content">
+    <h1>Dealer Dashboard</h1>
 
-    <div class="content">
+    <!--  Add Product Form -->
+    <div class="card">
+        <h3>Add Product</h3>
+
+        <input id="pname" placeholder="Product Name">
+        <input id="price" placeholder="Price">
+
+        <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <!-- Optional -->
+    <div class="card">My Products</div>
+    <div class="card">Stock</div>
+</div>
+    <!-- <div class="content">
         <h1>Dealer Dashboard</h1>
 
         <div class="card">My Products</div>
         <div class="card">Stock</div>
-    </div>
+    </div> -->
 
 </div>
+<div id="products"></div>
+<script>
+function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "login.html";
+}
+</script>
 </body>
 </html>

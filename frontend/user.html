@@ -1,28 +1,49 @@
-<!-- <!DOCTYPE html>
+<script>
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (!user) {
+    window.location.href = "login.html";
+}
+</script>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>User-Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>User Dashboard</title>
 </head>
+
 <body class="user-theme">
+
 <div class="dashboard">
 
+    <!-- Sidebar -->
     <div class="sidebar">
         <h2>User</h2>
-        <button>View Products</button>
-        <button>Cart</button>
+        <button>Add Product</button>
+        <button>Remove Product</button>
+        <button>View Cart</button>
+        <button>Total Price</button>
         <button>Logout</button>
     </div>
 
+    <!-- Content -->
     <div class="content">
-        <h1>Welcome</h1>
+        <h1>User Dashboard</h1>
 
-        <div class="card">Browse Products</div>
-        <div class="card">My Cart</div>
+        <div class="card">Add items to your cart</div>
+        <div class="card">Manage your cart</div>
+        <div class="card">Check total price</div>
     </div>
 
 </div>
+<script>
+function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "login.html";
+}
+</script>
 </body>
-</html> -->
+</html>
